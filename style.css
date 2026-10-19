@@ -1,0 +1,281 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    background: #f7f8fc;
+    color: #202438;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 245px;
+    background: #171a2b;
+    color: #fff;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    font-size: 21px;
+    font-weight: 750;
+    margin-bottom: 48px;
+    letter-spacing: -0.6px;
+}
+
+.side-label {
+    color: #888da8;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.side-item {
+    padding: 13px;
+    border-radius: 10px;
+    background: #292d43;
+    font-size: 14px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 25px;
+    color: #c4c8d8;
+    font-size: 12px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #49d6a1;
+    margin-right: 6px;
+}
+
+.main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.topbar {
+    padding: 22px 34px;
+    background: #fff;
+    border-bottom: 1px solid #e9eaf1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.topbar h2 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.topbar p {
+    margin: 0;
+    color: #85899b;
+    font-size: 13px;
+}
+
+.badge {
+    color: #237a5b;
+    background: #e9f8f1;
+    border-radius: 20px;
+    padding: 9px 12px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.chat {
+    flex: 1;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px 28px;
+}
+
+.welcome {
+    text-align: center;
+    padding-top: 65px;
+}
+
+.sparkle {
+    color: #6b62e8;
+    font-size: 42px;
+}
+
+.welcome h1 {
+    font-size: clamp(25px, 4vw, 35px);
+    letter-spacing: -1px;
+    margin: 15px 0 10px;
+}
+
+.welcome > p {
+    color: #81869a;
+    font-size: 14px;
+}
+
+.suggestions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 600px;
+    margin: 35px auto;
+    text-align: left;
+}
+
+.suggestion {
+    border: 1px solid #e5e6ef;
+    background: #fff;
+    padding: 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    color: #252940;
+}
+
+.suggestion:hover {
+    border-color: #8178ee;
+    transform: translateY(-2px);
+}
+
+.suggestion strong {
+    font-size: 13px;
+}
+
+.suggestion small {
+    color: #85899b;
+    font-size: 12px;
+}
+
+.message {
+    margin: 18px 0;
+    line-height: 1.65;
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.message.user {
+    background: #ecebff;
+    border-radius: 16px 16px 4px 16px;
+    padding: 13px 16px;
+    margin-left: auto;
+    max-width: 78%;
+    width: fit-content;
+}
+
+.message.assistant {
+    background: #fff;
+    border: 1px solid #e8e9f0;
+    border-radius: 4px 16px 16px 16px;
+    padding: 16px 18px;
+    max-width: 85%;
+}
+
+.message.error {
+    border-color: #f0b5b5;
+    color: #a52b2b;
+}
+
+.composer {
+    position: relative;
+    max-width: 850px;
+    width: calc(100% - 48px);
+    margin: 0 auto 25px;
+    padding: 12px 14px 35px;
+    border: 1px solid #dedfeb;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 5px 24px #2529400a;
+}
+
+.composer textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: vertical;
+    min-height: 45px;
+    max-height: 150px;
+    font: inherit;
+    font-size: 14px;
+    padding: 10px 48px 8px 5px;
+    background: transparent;
+}
+
+.composer button {
+    position: absolute;
+    right: 14px;
+    top: 13px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 12px;
+    background: #6b62e8;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.composer button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+.composer-note {
+    position: absolute;
+    left: 17px;
+    bottom: 2px;
+    color: #9699a8;
+    font-size: 10px;
+}
+
+@media (max-width: 650px) {
+    .sidebar {
+        display: none;
+    }
+
+    .topbar {
+        padding: 18px;
+    }
+
+    .badge {
+        font-size: 0;
+    }
+
+    .badge:first-letter {
+        font-size: 11px;
+    }
+
+    .chat {
+        padding: 20px 16px;
+    }
+
+    .welcome {
+        padding-top: 35px;
+    }
+
+    .suggestions {
+        grid-template-columns: 1fr;
+    }
+
+    .composer {
+        width: calc(100% - 24px);
+    }
+}

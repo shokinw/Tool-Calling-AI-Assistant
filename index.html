@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool-Calling AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">✦ ToolMate AI</div>
+            <p class="side-label">YOUR ASSISTANT</p>
+            <div class="side-item active">💬 New conversation</div>
+
+            <div class="sidebar-bottom">
+                <span class="status-dot"></span>
+                Local AI · Ollama
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h2>AI Assistant</h2>
+                    <p>Ask questions. Let AI use tools.</p>
+                </div>
+                <span class="badge">● Backend connected via API</span>
+            </header>
+
+            <section class="chat" id="chat">
+                <div class="welcome" id="welcome">
+                    <div class="sparkle">✦</div>
+                    <h1>What can I help you with?</h1>
+                    <p>I can calculate percentages and check the weather.</p>
+
+                    <div class="suggestions">
+                        <button class="suggestion"
+                            data-question="Calculate 15% of 2000">
+                            <span>🧮</span>
+                            <strong>Calculate a percentage</strong>
+                            <small>Calculate 15% of 2000</small>
+                        </button>
+
+                        <button class="suggestion"
+                            data-question="What is the weather in Bengaluru?">
+                            <span>🌤️</span>
+                            <strong>Check the weather</strong>
+                            <small>Weather in Bengaluru</small>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <form class="composer" id="chat-form">
+                <textarea id="question" rows="1"
+                    placeholder="Ask anything..."
+                    aria-label="Your question"></textarea>
+                <button type="submit" id="send-button">↑</button>
+                <p class="composer-note">AI can make mistakes. Verify important information.</p>
+            </form>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
