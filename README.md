@@ -4,7 +4,8 @@ A local Ai Assistant that can use tools to answer questions. It runs on your own
 Ask it to calculate something or check wheather - it will pick the right tool and do it.
 
 "E.g.," 'Calculate 15% of 2000' or 'What is the weather of Jammu?'
-<img width="1917" height="1078" alt="Screenshot 2026-10-20 042700" src="https://github.com/user-attachments/assets/f7ab7f34-a3a1-49a7-8519-bdad07e38eba" />
+<img width="1917" height="1007" alt="Screenshot 2026-10-20 042726" src="https://github.com/user-attachments/assets/7162131b-2e8c-469c-a503-0e7bdf951935" />
+
 
 #features
 LLM decide when to use a tool
@@ -13,8 +14,7 @@ Weather tool using Open_Meteo API
 Input validation with Pydantic
 FastApi backend +Simple HTML/CSS?JS frontend
 Runs locacly, no API key needed
-
-<img width="1917" height="1007" alt="Screenshot 2026-10-20 042726" src="https://github.com/user-attachments/assets/7162131b-2e8c-469c-a503-0e7bdf951935" />
+<img width="1917" height="1078" alt="Screenshot 2026-10-20 042700" src="https://github.com/user-attachments/assets/f7ab7f34-a3a1-49a7-8519-bdad07e38eba" />
 
 ### How it Works
 User -> Chat UI -> FastAPI (/chat) -> Ollama (Llama 3.1) -> Selects Tool -> Python Function -> LLM generates final answer
